@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Evolution Timer App</title>
+
+    <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="app-body">
+
+    <!-- The "world" div container -->
+    <div id="world" class="world-container">
+        <div class="grid-wrapper">
+            <div id="grid-container" class="grid-25x25">
+                <!-- Grid Boxes will be generated here with JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Timer Card -->
+    <div class="timer-card">
+        <h1 class="timer-title">
+            Focus Timer
+        </h1>
+
+        <!-- Timer Display -->
+        <div id="timer-display" class="timer-display">
+            <span id="minutes" class="time-segment">00</span>
+            <span class="time-separator">:</span>
+            <span id="seconds" class="time-segment">00</span>
+            <span id="centiseconds" class="time-fraction">.00</span>
+        </div>
+
+        <!-- Control Timer Buttons -->
+        <div class="controls">
+            
+            <!-- Start/Pause Button -->
+            <button id="start-pause-btn" class="btn-base btn-start-green">
+                <svg id="start-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon hidden"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                <span id="start-pause-text">Start</span>
+            </button>
+
+            <!-- Reset Button -->
+            <button id="reset-btn" class="btn-base btn-reset">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.79 2.81L3 8"></path><path d="M3 3v5h5"></path><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.79-2.81L21 16"></path><path d="M21 21v-5h-5"></path></svg>
+                Reset
+            </button>
+        </div>
+        
+        <div class="timer-info">
+            Grid changes color every 20 seconds using Vanilla JavaScript.
+        </div>
+    </div>
+
+    <script src="JS/timer.js"></script>
+</body>
+</html>

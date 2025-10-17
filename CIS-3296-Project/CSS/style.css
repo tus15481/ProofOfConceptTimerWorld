@@ -1,0 +1,194 @@
+/* BASE & LAYOUT STYLES */
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem; 
+    background-color: #111827; 
+}
+
+/* GRID STYLES */
+.world-container {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem; 
+    padding-bottom: 1.5rem; 
+}
+
+.grid-wrapper {
+    width: 100%; 
+    max-width: 64rem; 
+    border: 4px solid #2dd4bf; 
+    border-radius: 0.75rem; 
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.1), 0 10px 10px -5px rgba(37, 99, 235, 0.04); 
+}
+
+.grid-25x25 {
+    display: grid;
+    grid-template-columns: repeat(25, 1fr); 
+    aspect-ratio: 1 / 1; 
+    background-color: #1f2937; 
+}
+
+/* WORLD BOX STYLES */
+.worldbox {
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(17, 24, 39, 0.1); 
+}
+
+.box-gray {
+    background-color: #374151; 
+}
+.box-gray:hover {
+    background-color: #0d9488; 
+}
+
+.box-orange {
+    background-color: #f97316;
+}
+.box-orange:hover {
+    background-color: #fb923c; 
+}
+
+/* TIMER CARD STYLES */
+.timer-card {
+    width: 100%; 
+    max-width: 28rem; 
+    background-color: #1f2937;
+    padding: 2rem; 
+    border-radius: 1.5rem; 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+    margin-top: 2rem; 
+    margin-bottom: 1rem; 
+    transition: all 0.3s ease;
+}
+
+.timer-title {
+    font-size: 2.25rem; 
+    font-weight: 800; 
+    color: #38bdf8; 
+    margin-bottom: 2rem; 
+    text-align: center;
+    letter-spacing: -0.025em; 
+}
+
+/* TIMER DISPLAY */
+.timer-display {
+    color: white; 
+    font-size: 4.5rem; 
+    font-family: monospace;
+    margin-bottom: 3rem; 
+    text-align: center;
+    background-color: #111827; 
+    padding: 1.5rem; 
+    border-radius: 1rem; 
+    border: 4px solid rgba(45, 212, 191, 0.5); 
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.time-segment {
+    font-weight: 700;
+    letter-spacing: 0.05em; 
+}
+.time-separator {
+    color: #9ca3af; 
+}
+.time-fraction {
+    color: #38bdf8; 
+    font-size: 1.875rem; 
+    margin-left: 0.5rem; 
+}
+
+/* CONTROLS */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; 
+}
+
+.btn-base {
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem; 
+    border-radius: 9999px; 
+    color: white;
+    font-weight: 600;
+    font-size: 1.125rem; 
+    transition: all 0.2s ease;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+    min-width: 120px; 
+}
+.btn-icon {
+    width: 1.5rem; /* w-6 */
+    height: 1.5rem; /* h-6 */
+    margin-right: 0.5rem; /* mr-2 */
+}
+
+/* START/PAUSE BUTTON COLORS */
+.btn-start-green {
+    background-color: #10b981; /* bg-green-600 */
+}
+.btn-start-green:hover {
+    background-color: #059669; /* hover:bg-green-700 */
+}
+.btn-start-green:active {
+    background-color: #047857; /* active:bg-green-800 */
+}
+
+.btn-pause-red {
+    background-color: #ef4444; /* bg-red-600 */
+}
+.btn-pause-red:hover {
+    background-color: #dc2626; /* hover:bg-red-700 */
+}
+.btn-pause-red:active {
+    background-color: #b91c1c; /* active:bg-red-800 */
+}
+
+/* RESET BUTTON COLORS */
+.btn-reset {
+    background-color: #4b5563; /* bg-gray-600 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-md */
+    opacity: 1;
+}
+.btn-reset:hover {
+    background-color: #6b7280; /* hover:bg-gray-500 */
+}
+.btn-reset:active {
+    background-color: #374151; /* active:bg-gray-700 */
+}
+.btn-reset:disabled {
+    opacity: 0.5;
+}
+.btn-reset .btn-icon {
+    width: 1.25rem; 
+    height: 1.25rem; 
+}
+
+/* INFO TEXT */
+.timer-info {
+    margin-top: 2rem; 
+    text-align: center;
+    color: #6b7280; 
+    font-size: 0.875rem; 
+}
+
+/* RESPONSIVENESS (for screen width >= 640px) */
+@media (min-width: 640px) {
+    .timer-display {
+        font-size: 6rem; 
+    }
+    .time-fraction {
+        font-size: 2.25rem; /* sm:text-4xl */
+    }
+    .btn-base {
+        min-width: 150px; /* sm:min-w-[150px] */
+    }
+}
